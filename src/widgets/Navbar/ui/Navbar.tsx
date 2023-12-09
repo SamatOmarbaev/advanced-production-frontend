@@ -1,35 +1,33 @@
-import { FC } from "react";
+import { type FC } from 'react';
 
-import { classNames } from "shared/lib/classNames/classNames";
-import AppLink, { AppLinkTheme } from "shared/ui/AppLink/AppLink";
+import { classNames } from 'shared/lib/classNames/classNames';
+import AppLink, { AppLinkTheme } from 'shared/ui/AppLink/AppLink';
 
-import styles from "./Navbar.module.scss";
+import styles from './Navbar.module.scss';
 
 interface NavbarProps {
-  className?: string;
+  className?: string
 }
 
-const Navbar: FC<NavbarProps> = ({ className }) => {
-  return (
-    <nav className={classNames(styles.Navbar, {}, [className])}>
-      <div className={classNames(styles.links, {}, [])}>
-        <AppLink
-          theme={AppLinkTheme.SECONDARY}
-          className={styles.link}
-          to={"/"}
-        >
-          Главная
-        </AppLink>
-        <AppLink
-          theme={AppLinkTheme.SECONDARY}
-          className={styles.link}
-          to={"/about"}
-        >
-          О нас
-        </AppLink>
-      </div>
-    </nav>
-  );
-};
+const Navbar: FC<NavbarProps> = ({ className }) => (
+  <nav className={classNames(styles.Navbar, {}, [className])}>
+    <div className={classNames(styles.links, {}, [])}>
+      <AppLink
+        theme={AppLinkTheme.SECONDARY}
+        className={styles.link}
+        to="/"
+      >
+        Главная
+      </AppLink>
+      <AppLink
+        theme={AppLinkTheme.SECONDARY}
+        className={styles.link}
+        to="/about"
+      >
+        О нас
+      </AppLink>
+    </div>
+  </nav>
+);
 
 export default Navbar;
