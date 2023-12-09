@@ -1,13 +1,13 @@
-import { FC, useState } from "react";
+import { type FC, useState } from 'react';
 
-import { classNames } from "shared/lib/classNames/classNames";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
+import { classNames } from 'shared/lib/classNames/classNames';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 
-import styles from "./Sidebar.module.scss";
-import { LangSwitcher } from "widgets/LangSwitcher";
+import { LangSwitcher } from 'widgets/LangSwitcher';
+import styles from './Sidebar.module.scss';
 
 interface SidebarProps {
-  className?: string;
+  className?: string
 }
 
 const Sidebar: FC<SidebarProps> = ({ className }) => {
@@ -23,7 +23,7 @@ const Sidebar: FC<SidebarProps> = ({ className }) => {
         className,
       ])}
     >
-      <button onClick={toggleSidebar}>Toggle</button>
+      <button type="button" onClick={toggleSidebar}>Toggle</button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LangSwitcher />
