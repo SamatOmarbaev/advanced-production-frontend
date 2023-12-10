@@ -1,11 +1,12 @@
 .Button {
-  cursor: pointer;
   color: var(--primary-color);
+  cursor: pointer;
 }
+
 .clear {
+  display: flex;
   padding: 0;
   background: none;
   border: none;
   outline: none;
-  display: flex;
 }
