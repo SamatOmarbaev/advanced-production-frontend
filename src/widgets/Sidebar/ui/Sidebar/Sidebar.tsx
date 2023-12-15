@@ -10,7 +10,7 @@ interface SidebarProps {
   className?: string
 }
 
-const Sidebar: FC<SidebarProps> = ({ className }) => {
+export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
 
   const toggleSidebar = () => {
@@ -19,11 +19,18 @@ const Sidebar: FC<SidebarProps> = ({ className }) => {
 
   return (
     <div
+      data-testid="sidebar"
       className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [
         className,
       ])}
     >
-      <button type="button" onClick={toggleSidebar}>Toggle</button>
+      <button
+        data-testid="sidebar-toggle"
+        type="button"
+        onClick={toggleSidebar}
+      >
+        Toggle
+      </button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LangSwitcher />
@@ -31,5 +38,3 @@ const Sidebar: FC<SidebarProps> = ({ className }) => {
     </div>
   );
 };
-
-export default Sidebar;
