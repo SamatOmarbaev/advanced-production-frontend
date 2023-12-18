@@ -1,4 +1,3 @@
-import path from 'path';
 import type webpack from 'webpack';
 
 import { buildLoaders } from './buildLoaders';
