@@ -29,7 +29,7 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
         type="button"
         onClick={toggleSidebar}
       >
-        {t('Toggle')}
+        {t('Переключатель')}
       </button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
