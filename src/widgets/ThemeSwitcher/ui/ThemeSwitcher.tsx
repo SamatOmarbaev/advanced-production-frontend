@@ -1,5 +1,4 @@
-import React, { type FC } from 'react';
-
+import { type FC } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 import { Theme, useTheme } from 'app/providers/ThemeProvider';
