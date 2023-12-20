@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Meta, StoryObj } from '@storybook/react';
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import { Theme } from 'app/providers/ThemeProvider';
@@ -23,11 +22,7 @@ export const PrimaryDark: Story = {
     children: 'test',
   },
   decorators: [
-    (Story) => (
-      <ThemeDecorator theme={Theme.DARK}>
-        <Story />
-      </ThemeDecorator>
-    ),
+    (Story) => ThemeDecorator(Theme.DARK)(Story),
   ],
 };
 
@@ -44,10 +39,6 @@ export const SecondaryDark: Story = {
     theme: AppLinkTheme.SECONDARY,
   },
   decorators: [
-    (Story) => (
-      <ThemeDecorator theme={Theme.DARK}>
-        <Story />
-      </ThemeDecorator>
-    ),
+    (Story) => ThemeDecorator(Theme.DARK)(Story),
   ],
 };

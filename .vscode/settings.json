@@ -13,4 +13,5 @@
     "editor.codeActionsOnSave": {
         "source.fixAll.stylelint": "explicit"
     },
+    "liveServer.settings.port": 5501,
 }

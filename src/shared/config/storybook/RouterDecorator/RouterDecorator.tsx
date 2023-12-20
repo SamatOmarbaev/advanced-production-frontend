@@ -1,12 +1,8 @@
-import React, { FC, ReactNode } from 'react';
+import { StoryFn } from '@storybook/react';
 import { BrowserRouter } from 'react-router-dom';
 
-interface RouterDecoratorProps {
-    children?: ReactNode
-}
-
-export const RouterDecorator: FC<RouterDecoratorProps> = ({ children }) => (
+export const RouterDecorator = (StoryComponent: StoryFn) => (
   <BrowserRouter>
-    {children}
+    <StoryComponent />
   </BrowserRouter>
 );
