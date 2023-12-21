@@ -1,0 +1,46 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: var(--modal-z-index);
+  color: var(--primary-color);
+  opacity: 0;
+  transition: opacity 0.3s, z-index 0.3s;
+  pointer-events: none;
+}
+
+.Modal.dark {
+  --inverted-bg-color: #262a2f;
+  --primary-color: #fff;
+}
+
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-color);
+}
+
+.content {
+  max-width: 60%;
+  padding: 20px;
+  background-color: var(--inverted-bg-color);
+  border-radius: 12px;
+  transform: scale(0.2);
+  transition: 0.5s transform;
+}
+
+.opened {
+  z-index: var(--modal-z-index);
+  opacity: 1;
+  transition: opacity 0.3s, z-index 0.3s;
+  pointer-events: auto;
+
+  .content {
+    transform: scale(1);
+  }
+}
