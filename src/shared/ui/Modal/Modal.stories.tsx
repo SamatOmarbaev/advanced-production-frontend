@@ -13,7 +13,7 @@ type Story = StoryObj<typeof Modal>;
 
 export const ModalNormal: Story = {
   args: {
-    element: document.getElementById('root'),
+    // element: document.getElementById('root'),
     isOpen: true,
     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis repellat nostrum minima quo alias quibusdam repudiandae earum neque odit saepe autem laborum magni, accusantium consequatur. Obcaecati, quaerat distinctio debitis aliquid, eligendi atque odio vero accusantium natus saepe ratione officia aspernatur aut minima id magni suscipit?',
   },
@@ -21,7 +21,7 @@ export const ModalNormal: Story = {
 
 export const ModalDark: Story = {
   args: {
-    element: document.getElementById('root'),
+    // element: document.getElementById('root'),
     isOpen: true,
     children: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum reiciendis repellat nostrum minima quo alias quibusdam repudiandae earum neque odit saepe autem laborum magni, accusantium consequatur. Obcaecati, quaerat distinctio debitis aliquid, eligendi atque odio vero accusantium natus saepe ratione officia aspernatur aut minima id magni suscipit?',
   },
