@@ -6,7 +6,6 @@ import Loader from './Loader';
 const meta = {
   title: 'shared/Loader',
   component: Loader,
-  tags: ['autodocs'],
 } satisfies Meta<typeof Loader>;
 
 export default meta;

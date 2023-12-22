@@ -6,7 +6,6 @@ import NotFoundPage from './NotFoundPage';
 const meta = {
   title: 'pages/NotFoundPage',
   component: NotFoundPage,
-  tags: ['autodocs'],
 } satisfies Meta<typeof NotFoundPage>;
 
 export default meta;
