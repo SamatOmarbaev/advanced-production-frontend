@@ -1,4 +1,6 @@
-import React, { ReactNode, useCallback, useEffect } from 'react';
+import React, {
+  ReactNode, useCallback, useEffect,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTheme } from 'app/providers/ThemeProvider';
 import styles from './Modal.module.scss';
@@ -10,6 +12,7 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   // element?: HTMLElement;
+  // lazy?: boolean
 }
 
 export const Modal = (props: ModalProps) => {
