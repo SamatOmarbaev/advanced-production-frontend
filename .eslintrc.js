@@ -46,7 +46,7 @@ module.exports = {
       'error', { markupOnly: true, ignoreAttribute: ['to', 'data-testid'] },
     ],
     'linebreak-style': 'off',
-    'max-len': ['error', { ignoreComments: true, code: 100 }],
+    'max-len': ['error', { ignoreComments: true, code: 150 }],
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'react-hooks/rules-of-hooks': 'error', // Проверяем правила хуков
