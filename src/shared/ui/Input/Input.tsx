@@ -1,15 +1,14 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import React, { InputHTMLAttributes, memo } from 'react';
 import { Trans } from 'react-i18next';
-import { log } from 'console';
 import styles from './Input.module.scss';
 
 type HTMLInputProps = Omit<InputHTMLAttributes<HTMLInputElement>, 'value' | 'onChange'>
 
 interface InputProps extends HTMLInputProps {
-    className?: string;
-    value?: string
-    onChange?: (value: string) => void
+  className?: string;
+  value?: string
+  onChange?: (value: string) => void
 }
 
 export const Input = memo((props: InputProps) => {
