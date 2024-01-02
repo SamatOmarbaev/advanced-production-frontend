@@ -1,0 +1,29 @@
+.link {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: 900;
+  text-transform: uppercase;
+  background: transparent;
+  fill: var(--primary-color);
+
+  &:hover {
+    color: var(--secondary-color);
+    fill: var(--secondary-color);
+  }
+}
+
+.item {
+  width: 0;
+  white-space: nowrap;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.collapsed {
+  .item {
+    width: 0;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+}
