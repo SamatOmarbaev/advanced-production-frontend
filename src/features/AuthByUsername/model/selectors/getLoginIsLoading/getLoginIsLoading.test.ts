@@ -3,8 +3,7 @@ import { getLoginIsLoading } from './getLoginIsLoading';
 
 describe('getLoginError.test', () => {
   test('should return true', () => {
-    const state: Partial<StateSchema> = {
-      // @ts-ignore
+    const state: DeepPartial<StateSchema> = {
       loginForm: {
         isLoading: true,
       },
@@ -12,7 +11,7 @@ describe('getLoginError.test', () => {
     expect(getLoginIsLoading(state as StateSchema)).toEqual(true);
   });
   test('should work with empty state', () => {
-    const state: Partial<StateSchema> = {};
+    const state: DeepPartial<StateSchema> = {};
     expect(getLoginIsLoading(state as StateSchema)).toEqual(false);
   });
 });
