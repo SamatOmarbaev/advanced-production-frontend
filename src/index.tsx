@@ -8,16 +8,16 @@ import 'shared/config/i18n/i18n';
 import 'app/styles/index.scss';
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root'),
+  document.getElementById('root') as HTMLElement,
 );
 root.render(
-  <StoreProvider>
-    <BrowserRouter>
+  <BrowserRouter>
+    <StoreProvider>
       <ErrorBoundary>
         <ThemeProvider>
           <App />
         </ThemeProvider>
       </ErrorBoundary>
-    </BrowserRouter>
-  </StoreProvider>,
+    </StoreProvider>
+  </BrowserRouter>,
 );
