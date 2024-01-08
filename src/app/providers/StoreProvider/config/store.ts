@@ -13,7 +13,6 @@ export function createReduxStore(
   asyncReducers?: ReducersMapObject<StateSchema>,
   navigate?: (to: To, options?: NavigateOptions) => void,
 ) {
-  // @ts-ignore // убрать потом и исправить ошибки
   const rootReducer: ReducersMapObject<StateSchema> = {
     ...asyncReducers,
     counter: counterReducer,

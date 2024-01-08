@@ -3,17 +3,15 @@
   border: 2px solid var(--inverted-bg-color);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 .data {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-top: 2rem;
+}
+
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .inputFirst {
@@ -28,4 +26,16 @@
 
 .input {
   border: none;
+}
+
+.loading,
+.error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.editing {
+  border: 2px solid var(--inverted-primary-color);
 }
